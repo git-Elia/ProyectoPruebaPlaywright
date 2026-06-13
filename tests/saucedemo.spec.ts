@@ -75,6 +75,6 @@ test('purchase an item', async ({ page }, testInfo) => {
   await page.getByRole('button', {name: 'Continue'}).click()
   await page.getByRole('button', {name: 'Finish'}).click()
 
-  await expect(page.getByRole('heading', {name: 'Thank you for your order!'})).toBeVisible()
+  await expect(page.getByRole('heading', {name: 'Thank you for your order!!'})).toBeVisible()
   // await page.pause()
 });
