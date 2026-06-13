@@ -1,8 +1,29 @@
 
-# Playwright
+# Dependencias
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+
+# Playwright outputs
+test-results/
+playwright-report/
+playwright/.cache/
 /playwright/.auth/
+
+# Screenshots / videos (si no quieres versionarlos)
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+
