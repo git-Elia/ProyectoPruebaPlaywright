@@ -41,7 +41,8 @@ export default defineConfig({
   use: {
     //headless se refiere a la ejecución del navegador en un modo especial donde no se muestra la interfaz gráfica de usuario (GUI).
      //Para ver el navegador y lo que está sucediendo en la página se establece headless : false
-    headless : false,
+    //Si quieres mantener el modo visual localmente pero headless en Jenkins
+    headless: process.env.CI === 'true',
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
