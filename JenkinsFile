@@ -1,0 +1,41 @@
+pipeline {
+    //En que agente se va a estar corriendo
+    agent any
+    //Que herramientas vamos a estar instalando al principio
+    tools {
+        nodejs 'NodeJS 26.3.0'
+    }
+    environment {
+        CI = 'false'
+    }
+    stages {
+        stage('Tareas de preparación') {
+            steps {
+                //Agregar el repo en el que está el código que necesitamos correr
+                echo 'Clonar(descargar) el repo...'
+                git branch: 'main',
+                url: 'https://github.com/git-Elia/ProyectoPruebaPlaywright/'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Ejecutando pruebas...'
+                sh 'node --version'
+                sh 'npm ci'
+                sh 'npx playwright install'
+                sh 'npx playwright test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Desplegando aplicación...'
+            }
+        }
+        stage('Tareas de limpieza') {
+            steps {
+                echo 'Tareas de limpieza...'
+            }
+        }
+    }
+}
