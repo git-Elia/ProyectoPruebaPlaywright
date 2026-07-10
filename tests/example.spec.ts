@@ -19,6 +19,17 @@ test('get started link', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
 
+
+test('Mostrar ambiente', async () => {
+
+  if(process.env.ENVIRONMENT!==undefined){
+    console.log(`Ambiente: ${process.env.ENVIRONMENT}`);
+  }
+  else{
+    console.log(`Ambiente: No se seleccionó el ambiente`);
+  }
+});
+
 /*test('test 3 - mercadolibre', async ({ page }) => {
   await page.goto('https://www.mercadolibre.com.co/')
 

@@ -8,7 +8,7 @@ import { defineConfig, devices } from '@playwright/test';
  //import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
- /* Descomentar cuando se quieran usar las variables de entorno
+ // Descomentar cuando se quieran usar las variables de entorno
  require('dotenv').config(
   {
     path: `.env.${process.env.NODE_ENV ? process.env.NODE_ENV : 'dev'}`
@@ -16,7 +16,7 @@ import { defineConfig, devices } from '@playwright/test';
     //path: `.env.dev`
   }
   );
-/*
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
