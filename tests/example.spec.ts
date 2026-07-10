@@ -22,8 +22,8 @@ test('get started link', async ({ page }) => {
 
 test('Mostrar ambiente', async () => {
 
-  if(process.env.ENVIRONMENT!==undefined){
-    console.log(`Ambiente: ${process.env.ENVIRONMENT}`);
+  if(process.env.Ambiente!==undefined){
+    console.log(`Ambiente: ${process.env.Ambiente}`);
   }
   else{
     console.log(`Ambiente: No se seleccionó el ambiente`);
