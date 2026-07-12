@@ -23,13 +23,13 @@ test('get started link', async ({ page }) => {
 test('Mostrar ambiente', async () => {
 
 
-  if(process.env.Ambiente!==undefined){
-    console.log(`Ambiente: ${process.env.Ambiente}`);
-    console.log(process.env.URL)
+  if(process.env.NODE_ENV!==undefined){
+    console.log(`Ambiente: ${process.env.NODE_ENV}`);
+    console.log(`URL del archivo .env: ${process.env.URL}`)
   }
   else{
     console.log(`Ambiente: No se seleccionó el ambiente desde Jenkins, valor local: ${process.env.ENVIRONMENT}`);
-    console.log(process.env.URL)
+    console.log(`URL del archivo .env: ${process.env.URL}`)
   }
 });
 
