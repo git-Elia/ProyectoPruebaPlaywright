@@ -9,8 +9,11 @@ import { defineConfig, devices } from '@playwright/test';
  //dotenv.config({ path: path.resolve(__dirname, '.env') });
 
  // Descomentar cuando se quieran usar las variables de entorno
+ //Usa la librería dotenv para cargar variables de entorno desde un archivo .env
  require('dotenv').config(
   {
+    //Si NODE_ENV tiene un valor, úsalo en la variable path; si no, usa 'dev'
+    //Operador ternario ? signfica--> condición ? valorSiVerdadero : valorSiFalso
     path: `.env.${process.env.NODE_ENV ? process.env.NODE_ENV : 'dev'}`
 
     //path: `.env.dev`
